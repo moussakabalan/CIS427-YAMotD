@@ -38,7 +38,7 @@ py Python/Server.py
 ```
 You should see:
 ```bash
-Server is ready to receive requests on port 9400...
+Server is ready to receive requests on port 12340...
 ```
 ### 2. Start the Client
 In a separate terminal:
