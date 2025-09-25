@@ -1,11 +1,77 @@
-# CIS427 YAMotD Project
-Project 01 of CIS427 (YAMotD)
+# Socket Programming with YAMotD
 
-Server-and-Client Socket communication in Python. Demonstrating with a YAMotD Demo; allowing for custom messages to be set and recieved by Clients.
+This project demonstrates **client–server communication using Python sockets**.  
+It uses a custom **"Yet Another Message of the Day" (YAMotD)** server that allows clients to retrieve or set a message of the day.
 
-*Currently, this supports ONLY ONE Client at a time!*
+> ⚠️ **Note:** This version supports **only one client connection at a time**.
 
-Screenshots of Output:
+---
+
+## 🛠️ Technologies Used
+- **Language:** Python 3.x  
+- **Libraries:** Built-in `socket` library  
+- **Environment:** Developed using VS Code on Windows (compatible with any OS that supports Python)
+
+---
+
+## 📂 Project Structure
+| File | Description |
+|------|-------------|
+| `Python/Server.py` | Starts the socket server, listens on a specified port, and handles incoming requests. |
+| `Python/Client.py` | Connects to the server as a client, sends user input, and displays server responses. |
+
+---
+
+## 📦 Prerequisites
+- Python 3.x installed  
+- (Optional) CPython interpreter for your operating system  
+
+---
+
+## 🚀 How to Run
+
+### 1. Start the Server
+Open a terminal and run:
+```bash
+# (Windows)
+py Python/Server.py
+```
+You should see:
+```bash
+Server is ready to receive requests on port 9400...
+```
+### 2. Start the Client
+In a separate terminal:
+```bash
+# (Windows)
+py Python/Client.py <server_ip>
+```
+> Use localhost as <server_ip> if running on the same device.
+### 3. Available Commands
+Once connected, the client supports the following commands:
+```bash
+MSGGET – Retrieve the current message of the day
+MSGSTORE – Set a new message of the day
+QUIT – Disconnect from the server
+SHUTDOWN – Shut down the server (admin only)
+```
+---
+## 📚 Networking Concepts Covered
+- Creating TCP sockets
+- Binding, listening, and accepting connections
+- Sending and receiving messages
+- Graceful connection termination
+
+---
+
+## 💡 Key Learnings
+- Implemented a basic TCP client–server model
+- Learned how to handle request/response loops over sockets
+- Explored the limitations of single-client server design
+
+---
+
+## 🖼️ Demo
 
 > <img width="606" height="122" alt="image" src="https://github.com/user-attachments/assets/20e78ac2-0b2f-4437-a488-ea296710a277" />
 
@@ -22,4 +88,4 @@ Screenshots of Output:
 > <img width="819" height="166" alt="image" src="https://github.com/user-attachments/assets/4a91a635-5639-4406-bc62-1914c0772a45" />
 
 
-*Dated 05/22/25*
+*Original Project Dated 05/22/25*
